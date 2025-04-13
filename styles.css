@@ -14,55 +14,30 @@ body {
 
 .image-wrapper {
   position: relative;
-  max-width: 100%;
+  max-width: 825px;
   width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 img {
-  max-width: 100%;
+  width: 100%;     /* Image will take up full width of the wrapper */
   height: auto;
   display: block;
   pointer-events: none;
   user-select: none;
+  object-fit: contain;
 }
 
-/* Invisible link */
 .submit-link {
   position: absolute;
-  bottom: 4%;
+  bottom: 3%; /* % relative to image-wrapper height */
   left: 50%;
   transform: translateX(-50%);
-  width: 150px; /* Adjust to match button size */
-  height: 70px;  /* Adjust to match button size */
+  width: 40%;  /* Responsive width */
+  aspect-ratio: 2 / 1; /* Keeps the height proportional */
   cursor: pointer;
   z-index: 10;
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.5s ease; /* Smooth transition for visibility changes */
-}
-
-/* Example: Make the invisible link semi-visible on medium-sized screens */
-@media (min-width: 768px) {
-  .submit-link {
-    opacity: 0.5; /* Make it semi-visible */
-    width: 200px; /* Resize the link on larger screens */
-    height: 80px; /* Adjust height for larger screens */
-  }
-}
-
-/* Example: Fully visible and larger link on larger screens */
-@media (min-width: 1024px) {
-  .submit-link {
-    opacity: 1; /* Fully visible on larger screens */
-    width: 250px; /* Resize the link further */
-    height: 100px; /* Adjust height for larger screens */
-  }
-}
-
-/* Example: Adjust invisible link behavior for small screens */
-@media (max-width: 480px) {
-  .submit-link {
-    opacity: 0.3; /* Less visible on small screens */
-    width: 120px; /* Smaller link on very small screens */
-    height: 50px; /* Adjust height for small screens */
-  }
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
