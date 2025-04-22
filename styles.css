@@ -5,6 +5,18 @@
   scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+  body {
+    transform: scale(1.2);
+    transform-origin: top center;
+  }
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 body {
   background-color: #fdfaf6;
   display: flex;
