@@ -5,24 +5,6 @@
   scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
-  body {
-    transform: scale(1.5);
-    transform-origin: top center;
-    width: calc(100% / 1.5); /* Counteract scale to prevent scroll */
-  }
-
-  html {
-    overflow-x: hidden;
-  }
-}
-
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-}
-
 body {
   background-color: #fdfaf6;
   display: flex;
